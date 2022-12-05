@@ -1,0 +1,17 @@
+import java.util.regex.*;
+
+public class Busca {
+	public boolean buscaTexto2(String texto) {
+		String er = ".*(ta[nm]b[eé](m?) | tb).*";
+		return texto.matches(er);
+	}
+	public boolean buscaTexto(String[] p, String texto) {
+		String er = ".*(" + p[0];
+		for ( int i=1; i<p.length; i++) {
+			er += "|" + p[i].toLowerCase();
+		}
+		er += ").*";
+		texto = texto.toLowerCase();
+		return texto.matches(er);
+	}
+}

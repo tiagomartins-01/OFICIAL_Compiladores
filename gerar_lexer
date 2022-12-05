@@ -1,0 +1,18 @@
+package ExemploCUP;
+import java.io.*;
+import java.nio.file.Paths;
+import java_cup.*;
+import java_cup.runtime.*;
+
+public class Gera_Lexer {
+	public static void main(String[] args) throws IOExcepetion {
+		String arq = Paths.get("").toAbsolutePath().toString() + "src/ExemploCup/";
+		String arq1 = arq + "lexico.flex";
+		System.out.println(arq1);
+		gerarLexer(arq1);
+	}
+	public static void gerarLexer(String arg) {
+		File file = new File(arq);
+		jflex.Main.generate(file);
+	}
+}
